@@ -1,0 +1,31 @@
+Question 1
+Which of the following statements is true about our use of npm and chmod before executing ./market-research.js?
+We need to both install necessary libraries and make the file executable before executing it.
+Question 2
+After looking at the source of market-research.js, what variable holds the arguments sent to the script when invoked at the command line?
+process.argv
+Question 3
+What do the lines like symbols = symbols || SYMBOLS_DEFAULT; do?
+This is a JS idiom for setting default arguments.
+Question 4
+Which of the following are standard node modules, included with the default install?
+util fs
+Question 5
+What is the most likely bug in the marketCapFloat function?
+The function currently assumes dollar values in the billions.
+Question 6
+What does csv2console do?
+Reads in data from csvfile, computes and formats derived quantities, and prints these out to STDOUT.
+Question 7
+What does buildfn do? (Hint: read this and this if you've never heard of closures.)
+Creates and returns a function named response2console, which is parametrized with the values of csvfile and headers from the enclosing scope.
+Question 8
+What does the marketResearch function do?
+Constructs a Yahoo Finance API call, and invokes code that first writes the results of that API call to disk and then reads/prints/processes said file
+Question 9
+What does the if(require.main == module) conditional do? Check all that apply. (Hint: see here and here (halfway down the page) if you can't figure it out from context).
+Parse the stock symbols input at the command line, starting with the process.argv variable and producing the symbols variable. 
+Triggers two different blocks of code, one that executes when market-research is invoked from the command line and one that executes when invoked as a module via require.	
+Question 10
+Why do we use console.error in addition to console.log (Hint: see here)?
+console.error prints to STDERR, while console.log prints to STDOUT. This allows us to print both metadata/error messages and actual output at the same time.
